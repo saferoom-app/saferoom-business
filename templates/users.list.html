@@ -1,0 +1,24 @@
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<th><input type="checkbox" id="chkAll"/></th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Created</th>
+			</thead>
+			<tbody>
+			{% for user in items %}
+			<tr>
+				<td><input type="checkbox"/></td>
+				<td><a class="table_href" id="{{user.id}}" href="#">{{user.name}}</a></td>
+				<td>{{user.name}}</td>
+				<td>{{user.created}}</td>
+			</tr>
+			{%else%}
+			<tr>
+				<td colspan="4" style="text-align:center">[ No users created ]</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>

@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+
+<!-- body content  -->
+{% block styles %}
+	<style>
+		html, body, .container-table {height: 100%;}
+		.container-table {display: table;}
+		.vertical-center-row {display: table-cell;vertical-align: middle}
+	</style>
+{% endblock %}
+
+{% block body %}
+{% include "signin.content.html" %}
+{% endblock %}
+{% block scripts %}
+	<script type="text/javascript" src="/static/js/signin.js"></script>
+{% endblock %}

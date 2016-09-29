@@ -1,0 +1,19 @@
+{%extends "layout.html"%}
+
+<!-- body content  -->
+{% block styles %}
+	<link rel="stylesheet" type="text/css" href="/static/css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="/static/fawesome/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+{% include "index.content.html" %}
+{% endblock %}
+{% block scripts %}
+	<script>
+$("#menu-toggle").click(function(e) {
+	e.preventDefault();
+	$("#wrapper").toggleClass("toggled");
+});
+</script>
+{% endblock %}

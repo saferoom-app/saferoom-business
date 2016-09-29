@@ -1,0 +1,31 @@
+<div id="wrapper">
+	<!-- Sidebar -->
+	{%include "sidebar.html"%}
+	<!-- /#sidebar-wrapper -->
+
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Users <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle</a></h1><hr/>
+					<div>
+						<button title="Create a new user" id="btnAdd" type="button" class="btn btn-default" aria-label="Left Align">
+							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add user
+						</button>
+						<button title="Import a list of users using predefined template" type="button" class="btn btn-default" aria-label="Left Align">
+							<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Import users
+						</button>
+					</div><br/>
+					<div class="row" id="listUsers"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><div class="modal-dialog" role="document">
+		<div class="modal-content" id="modalContent"></div>
+	</div>
+</div>

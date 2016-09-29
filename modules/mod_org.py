@@ -1,8 +1,8 @@
 # Import section
 from flask import Blueprint, jsonify,abort,request,render_template
 import json
-from database import db_session
-from models import Organization, Administrator, CommonUser
+from core.database import db_session
+from core.models import Organization, Administrator, CommonUser
 
 # Initializing the blueprint
 mod_org = Blueprint("mod_org",__name__)

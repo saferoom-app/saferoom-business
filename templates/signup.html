@@ -1,0 +1,20 @@
+{%extends "layout.html"%}
+
+<!-- body content  -->
+{% block styles %}
+	<style>
+		html, body, .container-table {height: 100%;}
+		.container-table {display: table;}
+		.vertical-center-row {display: table-cell;vertical-align: middle}
+	</style>
+	<link rel="stylesheet" type="text/css" href="/static/css/toastr.css">
+	<link rel="stylesheet" type="text/css" href="/static/fawesome/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+{% include "signup.content.html" %}
+{% endblock %}
+{% block scripts %}
+	<script type="text/javascript" src="/static/js/signup.js"></script>
+	<script type="text/javascript" src="/static/js/toastr.js"></script>
+{% endblock %}

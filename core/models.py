@@ -94,6 +94,7 @@ class CommonUser(Base):
     created = Column(DateTime,default=datetime.datetime.utcnow)
     token = relationship("Token",uselist=False,backref='user')
     services = relationship("Service",secondary=relationship_table, backref='services')
+    org = relationship("Organization")
 
 
     def hash_password(self, password):
@@ -111,7 +112,8 @@ class CommonUser(Base):
         encrypted_string = cryptor.encrypt(str(self.id),key)
         return base64.b64encode(encrypted_string)
 
-    def decrypt_user_id(self,encrypted_id,key):
+    @staticmethod
+    def decrypt_user_id(encrypted_id,key):
         cryptor = rncryptor.RNCryptor()
         return cryptor.decrypt(base64.b64decode(encrypted_id),key)
 
